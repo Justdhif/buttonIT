@@ -1,0 +1,279 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --body-color: #ffffff;
+}
+
+body.dark {
+    --body-color: #262626;  
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 9rem 0 5rem;
+    background: var(--body-color);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.up,
+.bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.card {
+    width: 90px;
+    height: 90px;
+    outline: none;
+    border: none;
+    background: white;
+    box-shadow: 0 0 5px 2px #00000057;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card1,
+.card2,
+.card3,
+.card4 {
+    transition: .2s ease-in-out;
+}
+
+.card1 {
+    border-radius: 90px 5px 5px 5px;
+}
+
+.card2 {
+    border-radius: 5px 90px 5px 5px;
+}
+
+.card3 {
+    border-radius: 5px 5px 5px 90px;
+}
+
+.card4 {
+    border-radius: 5px 5px 90px 5px;
+}
+
+.card i {
+    font-size: 22px;
+    color: #000;
+}
+
+#tiktok {
+    margin-top: .7rem;
+    margin-left: .9rem;
+}
+
+#facebook {
+    margin-top: .7rem;
+    margin-right: .9rem;
+    color: #03A9F4;
+}
+
+#instagram {
+    margin-bottom: .7rem;
+    margin-left: .9rem;
+    color: #cc39a4;
+}
+
+#github {
+    margin-bottom: .7rem;
+    margin-right: .9rem;
+    color: #000000;
+}
+
+.card1:hover {
+    box-shadow: none;
+    background: #000;
+    scale: 1.1;
+}
+
+.card1:hover i {
+    color: #fff;
+}
+
+.card2:hover {
+    box-shadow: none;
+    background: #03A9F4;
+    scale: 1.1;
+}
+
+.card2:hover #facebook {
+    color: #fff;
+}
+
+.card3:hover {
+    box-shadow: none;
+    background: #cc39a4;
+    scale: 1.1;
+}
+
+.card3:hover #instagram {
+    color: #fff;
+}
+
+.card4:hover {
+    box-shadow: none;
+    background: #000000;
+    scale: 1.1;
+}
+
+.card4:hover #github {
+    color: #fff;
+}
+
+/* From Uiverse.io by rishichawda */ 
+/* The switch - the box around the slider */
+#theme-toggle-button {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 7em;
+    cursor: pointer;
+  }
+  
+  /* Hide default HTML checkbox */
+  #toggle {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  #container,
+  #patches,
+  #stars,
+  #button,
+  #sun,
+  #moon,
+  #cloud {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 0.25s;
+  }
+  
+  /* night sky background */
+  #toggle:checked + svg #container {
+    fill: #2b4360;
+  }
+  
+  /* move button to right when checked */
+  #toggle:checked + svg #button {
+    transform: translate(28px, 2.333px);
+  }
+  
+  /* show/hide sun and moon based on checkbox state */
+  #sun {
+    opacity: 1;
+  }
+  
+  #toggle:checked + svg #sun {
+    opacity: 0;
+  }
+  
+  #moon {
+    opacity: 0;
+  }
+  
+  #toggle:checked + svg #moon {
+    opacity: 1;
+  }
+  
+  /* show or hide background items on checkbox state */
+  #cloud {
+    opacity: 1;
+  }
+  
+  #toggle:checked + svg #cloud {
+    opacity: 0;
+  }
+  
+  #stars {
+    opacity: 0;
+  }
+  
+  #toggle:checked + svg #stars {
+    opacity: 1;
+  }
+
+header {
+    position: fixed;
+    top: 0;
+    right: 10px;
+}
+
+/* From Uiverse.io by alexmaracinaru */ 
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  
+  .cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #b1dae7;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+  }
+  
+  .cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #234567;
+  }
+  
+  .cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: #234567;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover:before {
+    width: 100%;
+    background: #b1dae7;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active {
+    transform: scale(0.95);
+  }
+  
